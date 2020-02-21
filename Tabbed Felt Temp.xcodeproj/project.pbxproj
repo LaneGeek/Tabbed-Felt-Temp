@@ -9,23 +9,24 @@
 /* Begin PBXBuildFile section */
 		6A01F0042400347B00F6CC6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A01F0032400347B00F6CC6C /* AppDelegate.swift */; };
 		6A01F0062400347B00F6CC6C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A01F0052400347B00F6CC6C /* SceneDelegate.swift */; };
-		6A01F0082400347B00F6CC6C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A01F0072400347B00F6CC6C /* FirstViewController.swift */; };
-		6A01F00A2400347B00F6CC6C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A01F0092400347B00F6CC6C /* SecondViewController.swift */; };
 		6A01F00D2400347B00F6CC6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A01F00B2400347B00F6CC6C /* Main.storyboard */; };
 		6A01F00F2400347F00F6CC6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A01F00E2400347F00F6CC6C /* Assets.xcassets */; };
 		6A01F0122400347F00F6CC6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A01F0102400347F00F6CC6C /* LaunchScreen.storyboard */; };
+		6A87A8CB24003EFD00838450 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A87A8CA24003EFD00838450 /* CalculatorViewController.swift */; };
+		6A87A8CD2400412F00838450 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A87A8CC2400412F00838450 /* HistoryTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6A01F0002400347B00F6CC6C /* Tabbed Felt Temp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tabbed Felt Temp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A01F0032400347B00F6CC6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A01F0052400347B00F6CC6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6A01F0072400347B00F6CC6C /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		6A01F0092400347B00F6CC6C /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		6A01F00C2400347B00F6CC6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6A01F00E2400347F00F6CC6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A01F0112400347F00F6CC6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A01F0132400347F00F6CC6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A01F0192400348A00F6CC6C /* Tabbed Felt Temp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Tabbed Felt Temp.entitlements"; sourceTree = "<group>"; };
+		6A87A8CA24003EFD00838450 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		6A87A8CC2400412F00838450 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +59,11 @@
 		6A01F0022400347B00F6CC6C /* Tabbed Felt Temp */ = {
 			isa = PBXGroup;
 			children = (
+				6A01F0192400348A00F6CC6C /* Tabbed Felt Temp.entitlements */,
 				6A01F0032400347B00F6CC6C /* AppDelegate.swift */,
 				6A01F0052400347B00F6CC6C /* SceneDelegate.swift */,
-				6A01F0072400347B00F6CC6C /* FirstViewController.swift */,
-				6A01F0092400347B00F6CC6C /* SecondViewController.swift */,
+				6A87A8CA24003EFD00838450 /* CalculatorViewController.swift */,
+				6A87A8CC2400412F00838450 /* HistoryTableViewController.swift */,
 				6A01F00B2400347B00F6CC6C /* Main.storyboard */,
 				6A01F00E2400347F00F6CC6C /* Assets.xcassets */,
 				6A01F0102400347F00F6CC6C /* LaunchScreen.storyboard */,
@@ -141,9 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A01F00A2400347B00F6CC6C /* SecondViewController.swift in Sources */,
-				6A01F0082400347B00F6CC6C /* FirstViewController.swift in Sources */,
+				6A87A8CD2400412F00838450 /* HistoryTableViewController.swift in Sources */,
 				6A01F0042400347B00F6CC6C /* AppDelegate.swift in Sources */,
+				6A87A8CB24003EFD00838450 /* CalculatorViewController.swift in Sources */,
 				6A01F0062400347B00F6CC6C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,7 +290,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Tabbed Felt Temp/Tabbed Felt Temp.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = Q6X243V23V;
 				INFOPLIST_FILE = "Tabbed Felt Temp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -297,6 +301,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "sekhah.lane.Tabbed-Felt-Temp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -306,7 +311,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Tabbed Felt Temp/Tabbed Felt Temp.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = Q6X243V23V;
 				INFOPLIST_FILE = "Tabbed Felt Temp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -315,6 +322,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "sekhah.lane.Tabbed-Felt-Temp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

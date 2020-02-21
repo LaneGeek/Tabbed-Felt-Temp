@@ -135,6 +135,9 @@
                                                         <rect key="frame" x="0.0" y="30.5" width="182" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                        <connections>
+                                                            <action selector="temperatureOrHumidityEditingDidEnd:" destination="eUU-Nd-NKd" eventType="editingDidEnd" id="JGO-4m-jEV"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -151,6 +154,9 @@
                                                         <rect key="frame" x="0.0" y="30.5" width="182" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                        <connections>
+                                                            <action selector="temperatureOrHumidityEditingDidEnd:" destination="eUU-Nd-NKd" eventType="editingDidEnd" id="3zs-dc-OVq"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -175,6 +181,9 @@
                                     </stackView>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="TSE-4c-xtR">
                                         <rect key="frame" x="-2" y="125" width="378" height="31"/>
+                                        <connections>
+                                            <action selector="windSpeedSlider:" destination="eUU-Nd-NKd" eventType="valueChanged" id="Or8-6W-Tss"/>
+                                        </connections>
                                     </slider>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9k9-mV-j4H">
                                         <rect key="frame" x="0.0" y="175" width="374" height="24"/>
@@ -204,6 +213,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7qt-HI-2gE">
                                                 <rect key="frame" x="261.5" y="0.0" width="114.5" height="31"/>
+                                                <connections>
+                                                    <action selector="humidityModeChanged:" destination="eUU-Nd-NKd" eventType="valueChanged" id="wrk-tx-YqV"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -317,6 +329,12 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Calculator" image="first" id="PNk-d9-UWg"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="feltTemperatureLabel" destination="i55-9K-reh" id="GGk-WA-dct"/>
+                        <outlet property="humidityTextField" destination="bwT-mi-nX6" id="VGJ-HM-4bf"/>
+                        <outlet property="temperatureTextField" destination="wBv-if-ORP" id="IUO-8y-QRG"/>
+                        <outlet property="windSpeedLabel" destination="kdl-wo-AZI" id="pxa-AL-jxs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6lH-Dl-xi1" sceneMemberID="firstResponder"/>
             </objects>

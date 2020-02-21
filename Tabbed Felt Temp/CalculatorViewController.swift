@@ -11,9 +11,16 @@ class CalculatorViewController: UIViewController {
     var temperature = 50
     var humidity = 50
     var humidityMode = true
+    var history: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Load history from user defaults if it exists
+        if UserDefaults.standard.array(forKey: "history") != nil {
+            history = UserDefaults.standard.array(forKey: "history") as! [String]
+        }
+
         updateDisplay()
     }
     
@@ -62,7 +69,7 @@ class CalculatorViewController: UIViewController {
         present(action, animated: true)
     }
     
-    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func viewWillDisappear(_ animated: Bool) {
         // If the temp has changed then add the new reading to history
         if history.count != 0 {
             if history[0] != feltTemperatureLabel.text {
@@ -72,11 +79,9 @@ class CalculatorViewController: UIViewController {
             history.insert(feltTemperatureLabel.text ?? "", at: 0)
         }
         
-        // If the segue destination is history then set the destination's data to the history here
-        if let historyVC = segue.destination as? HistoryTableViewController {
-            historyVC.history = history
-        }
-    }*/
+        // Save history to user defaults
+        UserDefaults.standard.set(history, forKey: "history")
+    }
     
     func updateDisplay() {
         // If either is blank it is assumed to be zero
@@ -94,6 +99,6 @@ class CalculatorViewController: UIViewController {
             feltTemperature = temperature
         }
         
-        feltTemperatureLabel.text = String(feltTemperature) + " ℉ " + CalculationsLibrary.temperatureToEmoji(temperature: feltTemperature)
+        feltTemperatureLabel.text =  CalculationsLibrary.temperatureToEmoji(temperature: feltTemperature) + " " + String(feltTemperature) + " ℉ "
     }
 }

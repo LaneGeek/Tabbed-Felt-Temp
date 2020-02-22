@@ -6,6 +6,7 @@ class CalculatorViewController: UIViewController {
     @IBOutlet weak var humidityTextField: UITextField!
     @IBOutlet weak var windSpeedLabel: UILabel!
     @IBOutlet weak var feltTemperatureLabel: UILabel!
+    @IBOutlet weak var dateAndTimePicker: UIDatePicker!
     
     var windSpeed = 50
     var temperature = 50
@@ -70,13 +71,20 @@ class CalculatorViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        // Get the time & date from the picker and format it
+        let timeAndDate = dateAndTimePicker.date
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM d, h:mm a"
+        let formattedDate = dateFormatter.string(from: timeAndDate)
+        let temperatureReading = formattedDate + ": " + (feltTemperatureLabel.text ?? "")
+        
         // If the temp has changed then add the new reading to history
         if history.count != 0 {
-            if history[0] != feltTemperatureLabel.text {
-                history.insert(feltTemperatureLabel.text ?? "", at: 0)
+            if history[0] != temperatureReading {
+                history.insert(temperatureReading, at: 0)
             }
         } else {
-            history.insert(feltTemperatureLabel.text ?? "", at: 0)
+            history.insert(temperatureReading, at: 0)
         }
         
         // Save history to user defaults
